@@ -4,6 +4,7 @@ import unittest
 #follow this example to add questions b, c, and d for testing including their functions
 from question_a.question_a import test_config, reverse_string
 from question_b.question_b import get_day_of_week
+from question_c.question_c import is_prime
 
 class Test_Config(unittest.TestCase):
 
@@ -25,3 +26,11 @@ class Test_QuestionB(unittest.TestCase):
         self.assertEqual(get_day_of_week(2), "Tuesday")
         self.assertEqual(get_day_of_week(3), "Wednesday")
         self.assertEqual(get_day_of_week(8), "Invalid number")
+
+
+
+class Test_QuestionC(unittest.TestCase):
+    def test_is_prime(self):
+        self.assertEqual(is_prime(4), False)
+        self.assertEqual(is_prime(5), True)
+        self.assertEqual(is_prime(11), True)
