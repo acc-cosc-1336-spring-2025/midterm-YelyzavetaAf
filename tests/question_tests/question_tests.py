@@ -2,7 +2,8 @@
 import unittest
 
 #follow this example to add questions b, c, and d for testing including their functions
-from src.question_a.question_a import test_config, reverse_string
+from question_a.question_a import test_config, reverse_string
+from question_b.question_b import get_day_of_week
 
 class Test_Config(unittest.TestCase):
 
@@ -17,3 +18,10 @@ class Test_Config(unittest.TestCase):
 
 
 
+class Test_QuestionB(unittest.TestCase):
+    def test_get_day_of_week(self):
+        self.assertEqual(get_day_of_week(0), "Invalid number")
+        self.assertEqual(get_day_of_week(1), "Monday")
+        self.assertEqual(get_day_of_week(2), "Tuesday")
+        self.assertEqual(get_day_of_week(3), "Wednesday")
+        self.assertEqual(get_day_of_week(8), "Invalid number")
