@@ -5,6 +5,7 @@ import unittest
 from question_a.question_a import test_config, reverse_string
 from question_b.question_b import get_day_of_week
 from question_c.question_c import is_prime
+from question_d.question_d import get_fahrenheit
 
 class Test_Config(unittest.TestCase):
 
@@ -34,3 +35,12 @@ class Test_QuestionC(unittest.TestCase):
         self.assertEqual(is_prime(4), False)
         self.assertEqual(is_prime(5), True)
         self.assertEqual(is_prime(11), True)
+
+
+
+class Test_QuestionD(unittest.TestCase):
+    def test_get_fahrenheit(self):
+        self.assertEqual(get_fahrenheit(0), 32)
+        self.assertEqual(get_fahrenheit(5), 41)
+        self.assertEqual(get_fahrenheit(10), 50)
+        
